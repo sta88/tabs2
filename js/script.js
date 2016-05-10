@@ -4,7 +4,7 @@
 	var foo = function() {
 		var tabsWrap = document.getElementById('tabs'),
 			tabs = document.querySelectorAll('*[data-rel]'),
-			tabsParent = [0,0,0,0],
+			tabsParent = [],
 			tabsContent = document.querySelectorAll('*[data-id]'),
 			i;
 
