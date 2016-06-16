@@ -6,9 +6,9 @@
 			tabs = document.querySelectorAll('*[data-rel]'),
 			tabsParent = [],
 			tabsContent = document.querySelectorAll('*[data-id]'),
-			i;
+			tabsLength = tabs.length;
 
-		for( i=0; i<tabs.length; i++){
+		for( var i=0; i<tabsLength; i++){
 			tabsParent[i] = tabs[i].parentElement;
 		}
 
@@ -23,7 +23,7 @@
 			clearActive(tabsContent);
 			clearActive(tabsParent);
 
-			for( i=0; i<tabs.length; i++){	
+			for( var i=0; i<tabsLength; i++){	
 				if( tabs[i].dataset.rel === elemAttr )	{		
 					tabs[i].parentElement.classList.add('active');
 					tabsContent[i].classList.add('active');	
